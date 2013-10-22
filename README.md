@@ -1,8 +1,8 @@
-# Node Landing
+## Node Landing
 
-#### Just a launch page built with Node, Express, Angular, and Mongo. 
+##### Just a launch page built with Node, Express, Angular, and Mongo. 
 
-### instructions*
+#### instructions
 1. Clone the repo.
 2. Run `mongod --dbpath db` to start the mongo server from the root.
 3. Run `npm install` from the server directory.
