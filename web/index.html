@@ -1,0 +1,45 @@
+<!doctype html>
+<html id="ng-app" ng-app="launchPage">
+	<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	  <script src="./assets/libs/angular/angular.js"></script>		
+	  <script src="./assets/libs/angular/angular-cookies.js"></script>
+	  <script src="./scripts/launchCtrl.js"></script>
+		<script src="./assets/libs/holder/holder.js"></script>
+		<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="http:////netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>				
+		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<title>Node Landing</title>
+		<style type="text/css">
+		body {padding-top: 50px;}
+		.container {max-width: 400px;}
+		</style>
+	</head>
+
+	<body ng-controller="LaunchCtrl">
+		<div class="container">
+			<center>
+				<div>
+					<center>
+						<form class="form-inline" role="form" name="form" ng-hide="user.thank_you || user.error">
+							<div class="form-group">
+			    		<label class="notify"><h1>Get notified when we launch!</h1></label>
+			    		<span>&nbsp;</span>
+			    		<div class="input-prepend">
+			    			<span class="add-on"><i class="icon-envelope"></i></span>
+				   			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" ng-model="user.email">
+				   		</div>
+				   		<br>
+				   		<label type="submit" class="bbtn btn-primary btn-lg btn-block" ng-disabled="user.email.length == 0" ng-click="addUserToBeta()">Submit</label>
+				    </div>		
+					</form>
+					<br>
+					<h1 ng-show="user.thank_you">Cheers! See you soon.</h1>
+					<h1 ng-show="user.error">You are already registered!</h1>
+				</center>
+			</div>				    
+		</div>
+	</body>
+</html>
+
